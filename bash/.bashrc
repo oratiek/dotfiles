@@ -143,10 +143,10 @@ PS1="\[\033[1;32m\]\$(date +%Y/%m/%d_%H:%M:%S)\[\033[0m\] \[\033[33m\]\H:\w\n\[\
 #
 # git-completion.bash / git-prompt.sh
 #
-if [ -f git-completion.bash ]; then
+if [ -f bash_git/git-completion.bash ]; then
     source /path/to/git-completion.bash
 fi
-if [ -f git-prompt.sh ]; then
+if [ -f bash_git/git-prompt.sh ]; then
     source /path/to/git-prompt.sh
 fi
 GIT_PS1_SHOWDIRTYSTATE=true

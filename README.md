@@ -1,5 +1,8 @@
 # dotfiles
 
+## Location
+- clone to home directory
+
 ## Installation
 - dotfile installation
 ```zsh

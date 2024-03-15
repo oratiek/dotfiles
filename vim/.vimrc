@@ -96,12 +96,7 @@ autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview
 set viewoptions-=options
 
 
-" run python repl これのせいでタブが入力できなくなる
-
-call plug#begin("~/.vim/plugged")
-    ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#begin("plugin")
     Plug 'preservim/nerdtree'
-    ""Plug 'rust-lang/rust.vim'
     Plug 'vimwiki/vimwiki'
-    Plug 'voldikss/vim-translator'
 call plug#end()

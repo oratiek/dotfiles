@@ -1,8 +1,13 @@
 # dotfiles
 
 ## Installation
+- dotfile installation
 ```zsh
 ./install.sh
+```
+- vim plugin installation
+```vim
+:PlugInstall
 ```
 
 ## refs

@@ -14,8 +14,9 @@ function prompt {
 if [ -e ~/.zshrc ]; then
     if prompt "zshrc already exists. Overwrite?"; then
         echo "overwrite configurations"
+        ln -fs $base/zsh/.zshrc ~/.zshrc
     else
-        echo "aborted."
+        echo "aborted..."
     fi
 else
     ln -s $base/zsh/.zshrc ~/.zshrc
@@ -26,9 +27,25 @@ fi
 if [ -e ~/.vimrc ]; then
     if prompt "vimrc already exists. Overwrite?"; then
         echo "overwrite configurations"
+        ln -fs $base/vim/.vimrc ~/.vimrc
     else
-        echo "aborted."
+        echo "aborted..."
     fi
 else
-    ln -s $base/vim/.vimrc ~/.vimrc
+    ln -fs $base/vim/.vimrc ~/.vimrc
 fi
+
+
+# TMUX
+if [ -e ~/.tmux.conf ]; then
+    if prompt "tmux.conf already exists. Overwrite?"; then
+        echo "overwrite configurations"
+        ln -fs $base/tmux/.tmux.conf ~/.tmux.conf
+    else
+        echo "aborted..."
+    fi
+else
+    ln -fs $base/tmux/.tmux.conf ~/.tmux.conf
+fi
+
+

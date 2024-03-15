@@ -34,9 +34,7 @@ hi Normal guibg=NONE ctermbg=NONE
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
-autocmd BufNewFile,BufRead *.memo colorscheme shine 
-
-colorscheme habamax 
+colorscheme desert
 
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |

@@ -2,5 +2,4 @@
 
 base=`pwd`
 
-
-ln -s $base/bash/.bashrc ~/.bashrc
+ln -s $base/zsh/.zshrc ~/.zshrc

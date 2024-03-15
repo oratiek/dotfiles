@@ -23,8 +23,6 @@ PROMPT="%F{40}[%n]%f %F{64}%~%f
 %# "
 
 # プロンプトカスタマイズ
-PROMPT='%F{40}[%n]%f %F{64}%~%f %F{cyan}$vcs_info_msg_0_%f
+PROMPT='%F{40}[%n%f@%F{114}$HOST%f %F{64}%~%f %F{cyan}$vcs_info_msg_0_%f
 %# '
 RPROMPT="%F{2}%T%f"
-
-

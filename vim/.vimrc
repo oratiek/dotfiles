@@ -82,13 +82,6 @@ vnoremap t ::Translate<CR>
 vnoremap <c-w> :!weblio <CR>
 
 
-" load user define command
-source ~/.vim/mycommand/binary.vim
-source ~/.vim/mycommand/date.vim
-source ~/.vim/mycommand/reload.vim
-source ~/.vim/syntax/transparent.vim
-
-
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
 autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif

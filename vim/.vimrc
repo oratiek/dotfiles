@@ -96,7 +96,7 @@ autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview
 set viewoptions-=options
 
 
-call plug#begin("plugin")
+call plug#begin("~/dotfiles/vim/plugin")
     Plug 'preservim/nerdtree'
     Plug 'vimwiki/vimwiki'
 call plug#end()

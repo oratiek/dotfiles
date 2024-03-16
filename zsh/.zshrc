@@ -5,6 +5,9 @@ export mamp="/Applications/MAMP/htdocs"
 export sfc="/Users/keitaro/Desktop/sfc"
 export LC_CTYPE="ja_JP.UTF-8"
 
+# ALIAS
+alias python=python3.10
+
 # git-completion
 fpath=(~/dotfiles/git_plugin/ $fpath)
 autoload -U compinit

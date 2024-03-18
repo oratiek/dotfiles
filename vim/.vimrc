@@ -56,4 +56,8 @@ nnoremap <C-f> :NERDTreeToggle<CR>
 call plug#begin("~/dotfiles/vim/plugin")
     Plug 'preservim/nerdtree'
     Plug 'vimwiki/vimwiki'
+    Plug 'habamax/vim-habanight'
 call plug#end()
+
+
+colorscheme habanight

@@ -47,12 +47,10 @@ augroup vimrcEx
   \ exe "normal g`\"" | endif
 augroup END
 
-
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | vertical resize 25 | wincmd p
-
 "他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+nnoremap <C-f> :NERDTreeToggle<CR>
 
 
 call plug#begin("~/dotfiles/vim/plugin")

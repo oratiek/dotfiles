@@ -4,6 +4,7 @@ export store="/Users/keitaro/Desktop/data_store"
 export mamp="/Applications/MAMP/htdocs"
 export sfc="/Users/keitaro/Desktop/sfc"
 export LC_CTYPE="ja_JP.UTF-8"
+export PATH=~/dotfiles/scripts:$PATH
 
 # ALIAS
 alias python=python3.10

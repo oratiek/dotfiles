@@ -11,7 +11,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-set clipboard+=unnamed
+set clipboard=unnamedplus
 set showmode
 
 set nocompatible
@@ -57,6 +57,7 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'preservim/nerdtree'
     Plug 'vimwiki/vimwiki'
     Plug 'habamax/vim-habanight'
+    Plug 'junegunn/fzf.vim'
 call plug#end()
 
 

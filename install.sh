@@ -49,7 +49,7 @@ else
 fi
 
 # vim and tmux
-sudo apt-get install vim
+sudo apt-get install vim-gtk
 sudo apt-get install tmux
 
 # vim-plug

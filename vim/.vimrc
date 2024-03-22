@@ -13,6 +13,7 @@ set shiftwidth=4
 set autoindent
 set clipboard=unnamedplus
 set showmode
+set wildmenu
 
 set nocompatible
 

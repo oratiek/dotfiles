@@ -14,6 +14,7 @@ set autoindent
 set clipboard=unnamedplus
 set showmode
 set wildmenu
+set laststatus=2 
 
 set nocompatible
 

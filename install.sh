@@ -34,6 +34,11 @@ if [ -e ~/.vimrc ]; then
 else
     ln -fs $base/vim/.vimrc ~/.vimrc
 fi
+# vim undo persistance
+if [ ! -d ~/.vim/undo ]; then
+    echo create vim undo file
+    mkdir ~/.vim/undo
+fi
 
 
 # TMUX

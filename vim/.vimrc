@@ -54,6 +54,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 nnoremap <C-f> :NERDTreeToggle<CR>
 
+" undo config
+if has('persistant_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
 
 call plug#begin("~/dotfiles/vim/plugin")
     Plug 'preservim/nerdtree'

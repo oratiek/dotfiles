@@ -53,10 +53,8 @@ else
     ln -fs $base/tmux/.tmux.conf ~/.tmux.conf
 fi
 
-# vim and tmux
-sudo apt-get install vim-gtk
-sudo apt-get install tmux
+# install apt-packages 
+./apt-packages/install.sh
 
 # vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-

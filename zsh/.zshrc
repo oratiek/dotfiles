@@ -5,6 +5,7 @@ export PATH=~/dotfiles/scripts:$PATH
 
 # ALIAS
 alias python=python3.10
+alias cpu='sensors | grep CPU'
 
 # git-completion
 fpath=(~/dotfiles/git_plugin/ $fpath)

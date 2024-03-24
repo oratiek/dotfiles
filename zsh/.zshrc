@@ -1,8 +1,5 @@
 # ENV
-export main="/Users/keitaro/Desktop/allProjects/Active"
-export store="/Users/keitaro/Desktop/data_store"
-export mamp="/Applications/MAMP/htdocs"
-export sfc="/Users/keitaro/Desktop/sfc"
+export main=~/Desktop/projects/
 export LC_CTYPE="ja_JP.UTF-8"
 export PATH=~/dotfiles/scripts:$PATH
 
@@ -30,3 +27,4 @@ PROMPT='%B%F{green}%n@$HOST%f%b %F{64}%~%f %F{cyan}$vcs_info_msg_0_%f
 RPROMPT="%F{2}%T%f"
 
 
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}

@@ -7,15 +7,16 @@ export PATH=~/dotfiles/scripts:$PATH
 alias python='python3.10'
 alias cpu='sensors | grep CPU'
 alias rm='trash-put'
-
-# linux brew
-eval "$(/bin/brew shellenv)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+alias bat='batcat'
 
 # git-completion
 fpath=(~/dotfiles/git_plugin/ $fpath)
 autoload -U compinit
 compinit -u
+
+# linux brew
+#eval "$(/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # git
 autoload -Uz vcs_info
@@ -35,5 +36,4 @@ RPROMPT="%F{2}%T%f"
 # gitignore gen command
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# start tmux when start terminal
-tmux
+

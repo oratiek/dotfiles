@@ -4,8 +4,13 @@ export LC_CTYPE="ja_JP.UTF-8"
 export PATH=~/dotfiles/scripts:$PATH
 
 # ALIAS
-alias python=python3.10
+alias python='python3.10'
 alias cpu='sensors | grep CPU'
+alias rm='trash-put'
+
+# linux brew
+eval "$(/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # git-completion
 fpath=(~/dotfiles/git_plugin/ $fpath)
@@ -27,5 +32,8 @@ PROMPT='%B%F{green}%n@$HOST%f%b %F{64}%~%f %F{cyan}$vcs_info_msg_0_%f
 %# '
 RPROMPT="%F{2}%T%f"
 
-
+# gitignore gen command
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# start tmux when start terminal
+tmux

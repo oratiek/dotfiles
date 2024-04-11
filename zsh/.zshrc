@@ -3,8 +3,11 @@ export main=~/Desktop/projects/
 export LC_CTYPE="ja_JP.UTF-8"
 export PATH=~/dotfiles/scripts:$PATH
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # ALIAS
-alias python='python3.10'
+alias python='eval $($python)'
 alias cpu='sensors | grep CPU'
 alias rm='trash-put'
 alias bat='batcat'

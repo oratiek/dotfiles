@@ -7,7 +7,7 @@ export PATH=~/dotfiles/scripts:$PATH
 eval "$(direnv hook zsh)"
 
 # ALIAS
-alias python='eval $($python)'
+alias python='eval $python'
 alias cpu='sensors | grep CPU'
 alias rm='trash-put'
 alias bat='batcat'

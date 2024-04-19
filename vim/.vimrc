@@ -18,7 +18,6 @@ set laststatus=2
 
 set nocompatible
 
-colorscheme default
 
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
@@ -68,4 +67,4 @@ call plug#begin("~/dotfiles/vim/plugin")
 call plug#end()
 
 
-colorscheme habanight
+colorscheme industry 

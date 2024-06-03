@@ -18,7 +18,7 @@ set laststatus=2
 set nocompatible
 
 " find files from vim
-set grepprg=git\ grep\ -n
+set grepprg=grep\ -rn
 augroup quickfix
     autocmd!
     autocmd QuickFixCmdPost [^l]* cwindow | wincmd j

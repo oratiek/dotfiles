@@ -30,8 +30,8 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 
 nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
+nnoremap <c-p> :resize +2<CR>
+nnoremap <c-n> :resize -2<CR>
 
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A
@@ -69,9 +69,9 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'preservim/nerdtree'
     Plug 'vimwiki/vimwiki'
     Plug 'habamax/vim-habanight'
-    Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 
 colorscheme industry 
+let g:airline_theme="icebergDark"

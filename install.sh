@@ -22,7 +22,6 @@ else
     ln -s $base/zsh/.zshrc ~/.zshrc
 fi
 
-
 # VIM
 if [ -e ~/.vimrc ]; then
     if prompt "vimrc already exists. Overwrite?"; then
@@ -61,3 +60,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 # linux brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# direnv
+brew install direnv

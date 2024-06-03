@@ -15,8 +15,15 @@ set clipboard=unnamedplus
 set showmode
 set wildmenu
 set laststatus=2 
-
 set nocompatible
+
+" find files from vim
+set grepprg=git\ grep\ -n
+augroup quickfix
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow | wincmd j
+    autocmd QuickFixCmdPost l* lwindow | wincmd j
+augroup END
 
 
 autocmd FileType python setl autoindent

@@ -69,6 +69,7 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'preservim/nerdtree'
     Plug 'vimwiki/vimwiki'
     Plug 'habamax/vim-habanight'
+    Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 

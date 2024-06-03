@@ -2,6 +2,10 @@
 export main=~/Desktop/projects/
 export LC_CTYPE="ja_JP.UTF-8"
 export PATH=~/dotfiles/scripts:$PATH
+export python=python3
+
+
+setopt HIST_IGNORE_SPACE
 
 # direnv
 eval "$(direnv hook zsh)"

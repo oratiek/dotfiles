@@ -11,7 +11,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-set clipboard=unnamedplus
+set clipboard=unnamed
 set showmode
 set wildmenu
 set laststatus=2 
@@ -36,12 +36,6 @@ nnoremap <Down> :resize -2<CR>
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A
 inoremap <c-t> <esc>I<Tab><esc>A
-
-" enable to undo after reopening file
-if has("persistent_undo")
-    set undodir=~/.vim/undo
-    set undofile
-endif
 
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
@@ -72,6 +66,3 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
-
-
-colorscheme industry 

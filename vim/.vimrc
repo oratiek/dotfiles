@@ -25,7 +25,6 @@ augroup quickfix
     autocmd QuickFixCmdPost l* lwindow | wincmd j
 augroup END
 
-
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
@@ -71,6 +70,7 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'vimwiki/vimwiki'
     Plug 'habamax/vim-habanight'
     Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 

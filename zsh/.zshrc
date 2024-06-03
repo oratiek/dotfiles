@@ -2,10 +2,19 @@
 export main=~/Desktop/projects/
 export LC_CTYPE="ja_JP.UTF-8"
 export PATH=~/dotfiles/scripts:$PATH
-export python=python3.10
-export note=~/Desktop/note/index.md
-export main=~/Desktop/projects
-export EDITOR=vim
+export python=python3
+
+
+setopt HIST_IGNORE_SPACE
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# ALIAS
+alias python='eval $python'
+alias cpu='sensors | grep CPU'
+alias rm='trash-put'
+alias bat='batcat'
 
 # git-completion
 fpath=($(pwd)/zsh/git_plugin/ $fpath)

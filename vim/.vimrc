@@ -16,6 +16,7 @@ set showmode
 set wildmenu
 set laststatus=2 
 set nocompatible
+set guitablabel=%t
 
 " find files from vim
 set grepprg=grep\ -rn
@@ -32,6 +33,16 @@ nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>
+
+" tabpage
+nnoremap <c-n> :tabe <CR>
+nnoremap <c-l> :tabnext <CR>
+nnoremap <c-h> :tabprevious <CR>
+nnoremap <c-c> :tabclose <CR>
+
+" fzf
+nnoremap <c-s> :Files<CR>
+nnoremap <c-g> :Rg<CR>
 
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A
@@ -72,4 +83,5 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'habamax/vim-habanight'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'posva/vim-vue'
 call plug#end()

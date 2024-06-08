@@ -30,8 +30,16 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 
 nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
-nnoremap <c-p> :resize +2<CR>
-nnoremap <c-n> :resize -2<CR>
+
+" tabpage
+nnoremap <c-n> :tabe <CR>
+nnoremap <c-l> :tabnext <CR>
+nnoremap <c-h> :tabprevious <CR>
+nnoremap <c-c> :tabclose <CR>
+
+" fzf
+nnoremap <c-s> :Files<CR>
+nnoremap <c-g> :Rg<CR>
 
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A

@@ -13,6 +13,11 @@
 :PlugInstall
 ```
 
+## Setting
+- CapslockをCtrlにする
+    - tweaksを開いて
+    - keyboard -> Additional Layout Options -> Ctrl Options
+
 ## refs
 - [setup git-completion for zsh](https://gist.github.com/juno/5546179)
 - [check history of apt installed](https://teratail.com/questions/32829)

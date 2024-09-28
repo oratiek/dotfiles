@@ -6,24 +6,11 @@ export python=python3.10
 export note=~/Desktop/note/index.md
 export main=~/Desktop/projects
 export EDITOR=vim
-# direnv
-eval "$(direnv hook zsh)"
-
-# ALIAS
-alias python='eval $python'
-alias cpu='sensors | grep CPU'
-alias rm='trash-put'
-alias bat='batcat'
-alias vimf='vim $(fzf)'
 
 # git-completion
 fpath=(~/dotfiles/git_plugin/ $fpath)
 autoload -U compinit
 compinit -u
-
-# linux brew
-#eval "$(/bin/brew shellenv)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # git
 autoload -Uz vcs_info
@@ -42,14 +29,5 @@ RPROMPT="%F{2}%T%f"
 
 # gitignore gen command
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-export PATH=/home/keitaro/Desktop/projects/terminal-tweet/bin:$PATH
-export TWI_LOGDIR=/home/keitaro/Desktop/projects/terminal-tweet/logs
-
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
-  eval "$(rbenv init -)"
 
 bindkey -e

@@ -3,6 +3,11 @@
 ## Location
 - clone to home directory
 
+## Components(neofetch)
+- OS: Ubuntu
+- DE: Cinnamon
+- WM: Mutter
+
 ## Installation
 - dotfile installation
 ```zsh

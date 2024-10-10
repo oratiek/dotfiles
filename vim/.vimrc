@@ -87,3 +87,5 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
+
+color industry

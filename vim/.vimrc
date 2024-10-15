@@ -44,6 +44,7 @@ nnoremap <c-g> :Rg<CR>
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A
 inoremap <c-t> <esc>I<Tab><esc>A
+autocmd BufNewFile,BufRead *.md color default 
 
 " enable to undo after reopening file
 if has("persistent_undo")

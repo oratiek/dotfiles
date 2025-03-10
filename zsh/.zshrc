@@ -8,7 +8,7 @@ export main=~/Desktop/projects
 export EDITOR=vim
 
 # git-completion
-fpath=(~/dotfiles/git_plugin/ $fpath)
+fpath=($(pwd)/zsh/git_plugin/ $fpath)
 autoload -U compinit
 compinit -u
 

@@ -13,9 +13,9 @@ sudo apt install -y git
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # config files
-ln -s vim/.vimrc ~/.vimrc
-ln -s zsh/.zshrc ~/.zshrc
-ln -s tmux/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/vim/.vimrc ~/.vimrc
+ln -s $(pwd)/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s $(pwd)/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 # Add Docker's official GPG key:
 sudo apt-get update

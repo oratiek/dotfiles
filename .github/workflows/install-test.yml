@@ -1,0 +1,22 @@
+name: Dotfiles Installation Test
+
+on:
+  push:
+    branches:
+      - "develop/**"
+  workflow_dispatch:
+
+jobs:
+  test-install:
+    name: Test install.sh
+    runs-on: ubuntu-latest
+  steps:
+    - names: Checkout code
+      uses: actions/checkout@v3
+
+    - names: Run install script non-interactively
+      run: |
+        chmod +x ./install.sh
+        yes | ./install.sh
+    - name: Verify exit code
+      run: echo "Install script completed successfully"

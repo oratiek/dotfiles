@@ -10,13 +10,14 @@ jobs:
   test-install:
     name: Test install.sh
     runs-on: ubuntu-latest
-  steps:
-    name: Checkout code
-    uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    name: Run install script non-interactively
-    run: |
-        chmod +x ./install.sh
-        yes | ./install.sh
-    name: Verify exit code
-    run: echo "Install script completed successfully"
+      - name: Run install script non-interactively
+        run: |
+            chmod +x ./install.sh
+            yes | ./install.sh
+
+      - name: Verify exit code
+        run: echo "Install script completed successfully"

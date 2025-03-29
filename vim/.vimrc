@@ -1,10 +1,16 @@
 set number
+set ruler
 set hlsearch
 set incsearch
 syntax on
 
 set cursorline
+set cursorcolumn
 set backspace=indent,eol,start
+
+set foldmethod=manual
+
+color sorbet 
 
 set expandtab
 set tabstop=4
@@ -31,8 +37,8 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 
 nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
-nnoremap <Up> :resize +2<CR>
-nnoremap <Down> :resize -2<CR>
+nnoremap <Up> :resize -2<CR>
+nnoremap <Down> :resize +2<CR>
 
 " tabpage
 nnoremap <c-n> :tabe <CR>
@@ -47,6 +53,32 @@ nnoremap <c-g> :Rg<CR>
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A
 inoremap <c-t> <esc>I<Tab><esc>A
+
+" TDOO
+let mapleader = "\<space>"
+nnoremap T /- [ \]<CR>
+nnoremap tt /- [-\]<CR>
+function! ToggleCheckBoxDone()
+    let line = getline('.')
+    if match(line, '- \[ \]') >= 0
+        let line = substitute(line, '- \[ \]', '- [x]', '') 
+    elseif match(line, '- \[x\]') >= 0
+        let line = substitute(line, '- \[x\]', '- \[ \]', '')
+    endif
+    call setline('.', line)
+endfunction
+nnoremap <leader>d :call ToggleCheckBoxDone()<CR>
+
+function! ToggleCheckBoxSuspend()
+    let line = getline('.')
+    if match(line, '- \[ \]') >= 0
+        let line = substitute(line, '- \[ \]', '- [-]', '') 
+    elseif match(line, '- \[-\]') >= 0
+        let line = substitute(line, '- \[-\]', '- \[ \]', '')
+    endif
+    call setline('.', line)
+endfunction
+nnoremap <leader>s :call ToggleCheckBoxSuspend()<CR>
 
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif

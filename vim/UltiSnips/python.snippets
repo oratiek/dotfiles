@@ -1,0 +1,30 @@
+snippet func
+def ${1:function_name}(${2:args}):
+	${3:pass}
+endsnippet
+
+
+snippet fastapi
+from fastapi import FastAPI
+from fastapi.responses HTMLResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating Jinja2Templates
+
+app = FastAPI()
+templates = Jinja2Templates(directory="templates")
+
+app.get("/")
+async def top(request: Request):
+	return templates.TemplateResponse(
+		request = request,
+		name = ${1:template_name}
+		context = {}
+	)
+endsnippet
+
+
+snippet if
+if (${1}) {
+	${2}
+}
+endsnippet

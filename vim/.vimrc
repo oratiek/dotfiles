@@ -10,7 +10,6 @@ set backspace=indent,eol,start
 
 set foldmethod=manual
 
-color sorbet 
 
 set expandtab
 set tabstop=4
@@ -113,6 +112,9 @@ if has('persistant_undo')
   set undofile
 endif
 
+" UltiSnips keybind
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -127,4 +129,6 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'posva/vim-vue'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 call plug#end()

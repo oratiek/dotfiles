@@ -17,7 +17,7 @@ app.get("/")
 async def top(request: Request):
 	return templates.TemplateResponse(
 		request = request,
-		name = ${1:template_name}
+		name = ${1:template_name},
 		context = {}
 	)
 endsnippet

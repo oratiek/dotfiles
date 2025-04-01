@@ -5,7 +5,6 @@ set incsearch
 syntax on
 
 set cursorline
-set cursorcolumn
 set backspace=indent,eol,start
 
 set foldmethod=manual
@@ -64,7 +63,7 @@ nnoremap <c-t> I<Tab><esc>A
 inoremap <c-t> <esc>I<Tab><esc>A
 autocmd BufNewFile,BufRead *.md color default 
 
-" TDOO
+" TODO
 let mapleader = "\<space>"
 nnoremap T /- [ \]<CR>
 nnoremap tt /- [-\]<CR>
@@ -89,6 +88,15 @@ function! ToggleCheckBoxSuspend()
     call setline('.', line)
 endfunction
 nnoremap <leader>s :call ToggleCheckBoxSuspend()<CR>
+
+function! EmptyCheckBox()
+    let line = getline('.')
+    if match(line, '- \[.\]') >= 0
+        let line = substitute(line, '- \[.\]', '- [ ]', '') 
+    endif
+    call setline('.', line)
+endfunction
+nnoremap <leader>l :call EmptyCheckBox()<CR>
 
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif

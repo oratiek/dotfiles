@@ -90,14 +90,14 @@ function! ToggleCheckBoxSuspend()
 endfunction
 nnoremap <leader>s :call ToggleCheckBoxSuspend()<CR>
 
-function! ToggleCheckBoxSuspend()
+function! EmptyCheckBox()
     let line = getline('.')
     if match(line, '- \[.\]') >= 0
         let line = substitute(line, '- \[.\]', '- [ ]', '') 
     endif
     call setline('.', line)
 endfunction
-nnoremap <leader>l :call ToggleCheckBoxSuspend()<CR>
+nnoremap <leader>l :call EmptyCheckBox()<CR>
 
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif

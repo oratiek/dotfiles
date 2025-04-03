@@ -48,15 +48,6 @@ nnoremap <c-g> :Rg<CR>
 nnoremap <Up> :resize -2<CR>
 nnoremap <Down> :resize +2<CR>
 
-" tabpage
-nnoremap <c-n> :tabe <CR>
-nnoremap <c-l> :tabnext <CR>
-nnoremap <c-h> :tabprevious <CR>
-nnoremap <c-c> :tabclose <CR>
-
-" fzf
-nnoremap <c-s> :Files<CR>
-nnoremap <c-g> :Rg<CR>
 
 " markdownを書くときのインデント挿入用
 nnoremap <c-t> I<Tab><esc>A

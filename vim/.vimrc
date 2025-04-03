@@ -41,6 +41,7 @@ nnoremap <c-n> :tabe <CR>
 nnoremap <c-l> :tabnext <CR>
 nnoremap <c-h> :tabprevious <CR>
 nnoremap <c-c> :tabclose <CR>
+nnoremap <c-o> :e 
 
 " fzf
 nnoremap <c-s> :Files<CR>

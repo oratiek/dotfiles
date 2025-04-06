@@ -14,8 +14,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 # config files
 ln -s $(pwd)/vim/.vimrc ~/.vimrc
-ln -s $(pwd)/dotfiles/zsh/.zshrc ~/.zshrc
-ln -s $(pwd)/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/zsh/.zshrc ~/.zshrc
+ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/xmodmap/.Xmodmap ~/.Xmodmap
 
 # Add Docker's official GPG key:
 sudo apt-get update

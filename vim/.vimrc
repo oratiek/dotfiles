@@ -36,6 +36,9 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
 
+" preview
+nnoremap <c-p> :MarkdownPreview<CR>
+
 " tabpage
 nnoremap <c-n> :tabe <CR>
 nnoremap <c-l> :tabnext <CR>

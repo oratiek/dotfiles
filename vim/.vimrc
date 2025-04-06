@@ -131,4 +131,6 @@ call plug#begin("~/dotfiles/vim/plugin")
     Plug 'posva/vim-vue'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+    Plug 'tyru/open-browser.vim'
+    Plug 'iamcco/markdown-preview.nvim'
 call plug#end()

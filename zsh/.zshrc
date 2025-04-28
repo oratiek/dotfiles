@@ -40,3 +40,5 @@ RPROMPT="%F{2}%T%f"
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 bindkey -e
+
+export PATH=$PATH:$HOME/dotfiles/bin

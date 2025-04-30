@@ -109,6 +109,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 nnoremap <C-f> :NERDTreeToggle<CR>
 
+nnoremap <c-p> gg o<esc>:r!ptime<CR>o- 
+
 " undo config
 if has('persistant_undo')
   set undodir=~/.vim/undo

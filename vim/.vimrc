@@ -9,6 +9,9 @@ set backspace=indent,eol,start
 
 set foldmethod=manual
 
+" インサートモードで縦棒にする
+let &t_SI .= "\e[5 q"
+let &t_EI .= "\e[1 q"
 
 set expandtab
 set tabstop=4

@@ -43,3 +43,6 @@ function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$
 bindkey -e
 
 export PATH=$PATH:$HOME/dotfiles/bin
+
+export AQUA_GLOBAL_CONFIG="$HOME/.config/aqua/aqua.yaml"
+export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
